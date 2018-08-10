@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.commons.io.IOUtils;
@@ -53,6 +54,7 @@ public class MainMonitor extends Application {
         });
         {
             stage.setTitle("HashGenerator");
+            stage.getIcons().add(new Image(MainMonitor.class.getResourceAsStream("/ui/icon.png")));
             stage.setResizable(true);
             scene = new Scene(FXMLLoader.load(getClass().getResource("/ui/mainfx.fxml")));
 
