@@ -148,9 +148,7 @@ public class MainMonitor extends Application {
 
     private void update(byte[] input) {
         HashCode hash = algorythm.get().hashBytes(input);
-
         Platform.runLater(() -> outlabel.setText(hash.toString()));
-
     }
 
     enum Inputtype {
