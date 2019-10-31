@@ -11,10 +11,14 @@ pipeline {
         sh 'mvn install'
       }
     }
+    stage('Archive') {
+      steps {
+        archiveArtifacts(artifacts: '/target/hashmonitor-1.0-SNAPSHOT.jar', onlyIfSuccessful: true)
+      }
+    }
   }
   tools {
     maven 'maven3'
     jdk 'oraclejdk8'
   }
-    
 }
