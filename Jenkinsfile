@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Archive') {
       steps {
-        archiveArtifacts(artifacts: '/target/hashmonitor-1.0-SNAPSHOT.jar', onlyIfSuccessful: true)
+        archiveArtifacts(artifacts: '**/target/*.jar', onlyIfSuccessful: true, excludes: '**/target/*-orginal.jar')
       }
     }
   }
