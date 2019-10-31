@@ -13,8 +13,8 @@ pipeline {
     }
   }
   tools {
-    maven 'Maven3'
-    jdk 'Java8'
+    maven 'maven3'
+    jdk 'oraclejdk8'
   }
     
 }
